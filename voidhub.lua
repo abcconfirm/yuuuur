@@ -942,6 +942,9 @@ local function ValidateKey(keyInput)
                         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7793cf6f1f5d4519e94ec4991b7b24f2.lua"))()
                     elseif game.PlaceId == 135729108619936 then
                         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/08317e6d21dbd971fd5827d32d226b36.lua"))()
+                    elseif game.PlaceId == 113236157544232 then
+                        -- Anime Astral Simulator (script id 72639995ab57a880c29acecbcda93a6a)
+                        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/72639995ab57a880c29acecbcda93a6a.lua"))()
                     else
                         LocalPlayer.Kick("🚫 This game is not supported by voidhub. Join a supported game to use the script.")
                     end
