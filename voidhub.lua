@@ -21,6 +21,7 @@ local GAME_SCRIPTS = {
 	[135729108619936] = "08317e6d21dbd971fd5827d32d226b36",
 	[113236157544232] = "72639995ab57a880c29acecbcda93a6a", -- Anime Astral Simulator
 	[132016691802922] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
+	[70790155462881] = "02b68a662ce9a46f089292b030f9871f" -- zombie farm
 }
 
 local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
