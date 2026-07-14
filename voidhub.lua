@@ -7,17 +7,20 @@ local UserInputService = game:GetService("UserInputService")
 local Player = Players.LocalPlayer
 local PlayerGui = Player:WaitForChild("PlayerGui")
 
-local SCRIPT_ID = "7d4d44567b1899503a60c87a69f0448f"
 local SAVED_KEY_FILE = "voidhub/voidhub_key.txt"
 local MAX_KEY_LENGTH = 50
 
-local GAME_LOADERS = {
-	[108533757090220] = "https://api.luarmor.net/files/v3/loaders/7d4d44567b1899503a60c87a69f0448f.lua", --GTD
-	[12351694619883] = "https://api.luarmor.net/files/v3/loaders/7d4d44567b1899503a60c87a69f0448f.lua", --GTD
-	[123516946198836] = "https://api.luarmor.net/files/v3/loaders/7d4d44567b1899503a60c87a69f0448f.lua", -- GTD
-	[123638582555543] = "https://api.luarmor.net/files/v3/loaders/7793cf6f1f5d4519e94ec4991b7b24f2.lua", -- Anime Fight
-	[135729108619936] = "https://api.luarmor.net/files/v3/loaders/08317e6d21dbd971fd5827d32d226b36.lua", -- Pet Factory
-	[113236157544232] = "https://api.luarmor.net/files/v3/loaders/72639995ab57a880c29acecbcda93a6a.lua", -- Anime Astral Simulator
+-- PlaceId -> Luarmor script ID. Key checks and loaders use this same source.
+local GAME_SCRIPTS = {
+	[108533757090220] = "7d4d44567b1899503a60c87a69f0448f",
+	[12351694619883] = "7d4d44567b1899503a60c87a69f0448f",
+	[123516946198836] = "7d4d44567b1899503a60c87a69f0448f",
+	[93059809719140] = "6bf0942a399cd32ab5a8031dcad77a46",
+	[114291906728616] = "ec6b4acabea984253ca21ca2baf9ed48",
+	[123638582555543] = "7793cf6f1f5d4519e94ec4991b7b24f2",
+	[135729108619936] = "08317e6d21dbd971fd5827d32d226b36",
+	[113236157544232] = "72639995ab57a880c29acecbcda93a6a", -- Anime Astral Simulator
+	[132016691802922] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
 }
 
 local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
@@ -31,6 +34,7 @@ local function px(n)
 	return math.floor(n * scale)
 end
 
+-- Void theme - matches the Rayfield voidhubTheme used by the games themselves.
 local Colors = {
 	Background = Color3.fromRGB(6, 6, 10),
 	Panel = Color3.fromRGB(11, 10, 17),
@@ -256,13 +260,13 @@ end
 
 local function LoadMainScript()
 	print("LOADING MAIN SCRIPT for place " .. tostring(game.PlaceId))
-	local loaderUrl = GAME_LOADERS[game.PlaceId]
-	if not loaderUrl then
+	local scriptId = GAME_SCRIPTS[game.PlaceId]
+	if not scriptId then
 		Player:Kick("🚫 This game is not supported by voidhub. Join a supported game to use the script.")
 		return
 	end
 	local ok, err = pcall(function()
-		loadstring(game:HttpGet(loaderUrl))()
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/" .. scriptId .. ".lua"))()
 	end)
 	if not ok then
 		warn("[voidhub] Main script failed to load: " .. tostring(err))
@@ -277,6 +281,11 @@ local function ValidateKey(keyInput)
 		ShowStatus("Please enter an access key", Colors.Error)
 		return
 	end
+	local scriptId = GAME_SCRIPTS[game.PlaceId]
+	if not scriptId then
+		ShowStatus("This game is not supported by voidhub", Colors.Error)
+		return
+	end
 
 	SetLoading(true)
 	ShowStatus("Validating key...", Colors.Warning)
@@ -284,7 +293,7 @@ local function ValidateKey(keyInput)
 	task.spawn(function()
 		local ok, result = pcall(function()
 			local LuarmorAPI = loadstring(game:HttpGet("https://sdkapi-public.luarmor.net/library.lua"))()
-			LuarmorAPI.script_id = SCRIPT_ID
+			LuarmorAPI.script_id = scriptId
 			return LuarmorAPI.check_key(keyInput)
 		end)
 
