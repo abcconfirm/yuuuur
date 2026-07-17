@@ -10,7 +10,6 @@ local PlayerGui = Player:WaitForChild("PlayerGui")
 local SAVED_KEY_FILE = "voidhub/voidhub_key.txt"
 local MAX_KEY_LENGTH = 50
 
--- PlaceId -> Luarmor script ID. Key checks and loaders use this same source.
 local GAME_SCRIPTS = {
 	[108533757090220] = "7d4d44567b1899503a60c87a69f0448f",
 	[12351694619883] = "7d4d44567b1899503a60c87a69f0448f",
