@@ -35,7 +35,6 @@ local function px(n)
 	return math.floor(n * scale)
 end
 
--- Void theme - matches the Rayfield voidhubTheme used by the games themselves.
 local Colors = {
 	Background = Color3.fromRGB(6, 6, 10),
 	Panel = Color3.fromRGB(11, 10, 17),
