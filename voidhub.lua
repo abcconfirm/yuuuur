@@ -21,6 +21,7 @@ local GAME_SCRIPTS = {
 	[102072869879193] = "72639995ab57a880c29acecbcda93a6a", -- Anime Astral Simulator
 	[132016691802922] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
 	[77458130464788] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
+	[82441325527385] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
 	[70790155462881] = "02b68a662ce9a46f089292b030f9871f", -- Zombie Turret Farm
 	[99702578544768] = "f7c39b17dc72c6d6dd2fe5bf9936979a", -- BE A FISH BAIT!
 }
