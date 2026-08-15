@@ -18,6 +18,7 @@ local GAME_SCRIPTS = {
 	[113236157544232] = "a3695c9f29b0e32af87a0ba3f2147cba", -- Anime Astral Simulator
 	[132016691802922] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
 	[77458130464788] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
+	[82441325527385] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
 	[70790155462881] = "a3695c9f29b0e32af87a0ba3f2147cba", -- Zombie Turret Farm
 	[99702578544768] = "f7c39b17dc72c6d6dd2fe5bf9936979a", -- Be a Fish Bait
 	[84515722934860] = "06ddc54d0d04db6d047cf7fb2121330e", -- Anime Expeditions
