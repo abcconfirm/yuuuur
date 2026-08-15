@@ -11,20 +11,17 @@ local SAVED_KEY_FILE = "voidhub/voidhub_key.txt"
 local MAX_KEY_LENGTH = 50
 
 local GAME_SCRIPTS = {
-	[108533757090220] = "7d4d44567b1899503a60c87a69f0448f",
-	[12351694619883] = "7d4d44567b1899503a60c87a69f0448f",
-	[123516946198836] = "7d4d44567b1899503a60c87a69f0448f",
-	[93059809719140] = "6bf0942a399cd32ab5a8031dcad77a46",
-	[114291906728616] = "ec6b4acabea984253ca21ca2baf9ed48",
-	[123638582555543] = "7793cf6f1f5d4519e94ec4991b7b24f2",
-	[135729108619936] = "08317e6d21dbd971fd5827d32d226b36",
-	[102072869879193] = "72639995ab57a880c29acecbcda93a6a", -- Anime Astral Simulator
+	[108533757090220] = "7d4d44567b1899503a60c87a69f0448f", -- Garden Tower Defense	
+	[12351694619883] = "7d4d44567b1899503a60c87a69f0448f", -- Garden Tower Defense	
+	[123516946198836] = "7d4d44567b1899503a60c87a69f0448f", -- Garden Tower Defense	
+	[135729108619936] = "a3695c9f29b0e32af87a0ba3f2147cba", -- Build A Pet Factory
+	[113236157544232] = "a3695c9f29b0e32af87a0ba3f2147cba", -- Anime Astral Simulator
 	[132016691802922] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
-	[77458130464788] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
-	[82441325527385] = "bb7b83fa7ea677e833498389b9a1d17f", -- Build a Base and Steal
-	[70790155462881] = "02b68a662ce9a46f089292b030f9871f", -- Zombie Turret Farm
-	[99702578544768] = "f7c39b17dc72c6d6dd2fe5bf9936979a", -- BE A FISH BAIT!
-	[107706720875645] = "ab6d29aa5023993c411af94bcb9b61db", -- Roll for Anime
+	[70790155462881] = "a3695c9f29b0e32af87a0ba3f2147cba", -- Zombie Turret Farm
+	[99702578544768] = "f7c39b17dc72c6d6dd2fe5bf9936979a", -- Be a Fish Bait
+	[84515722934860] = "06ddc54d0d04db6d047cf7fb2121330e", -- Anime Expeditions
+	[107706720875645] = "a3695c9f29b0e32af87a0ba3f2147cba", -- Roll for Anime
+	[83660368690441] = "a3695c9f29b0e32af87a0ba3f2147cba", -- Roll Your Army
 }
 
 local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
