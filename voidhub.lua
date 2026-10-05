@@ -25,6 +25,7 @@ local GAME_SCRIPTS = {
 	[107706720875645] = "a3695c9f29b0e32af87a0ba3f2147cba", -- Roll for Anime
 	[83660368690441] = "a3695c9f29b0e32af87a0ba3f2147cba", -- Roll Your Army
 	[78091651370612] = "73e76b1beccd1f5707de7d514160d813", -- Build a Golem
+	[116701845804918] = "515305894c24ced74d23af51510ac46d", -- Peel The potato
 }
 
 local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
