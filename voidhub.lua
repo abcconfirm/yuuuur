@@ -27,6 +27,7 @@ local GAME_SCRIPTS = {
 	[78091651370612] = "73e76b1beccd1f5707de7d514160d813", -- Build a Golem
 	[116701845804918] = "515305894c24ced74d23af51510ac46d", -- Peel The potato
 	[103363457515322] = "1dedecf1c031ba0ed00c779e13558cd5",
+	[77239332768345] = "1dedecf1c031ba0ed00c779e13558cd5",
 }
 
 local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
