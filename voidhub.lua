@@ -27,6 +27,7 @@ local GAME_SCRIPTS = {
     [116701845804918] = "a3695c9f29b0e32af87a0ba3f2147cba", -- Peel THE Potato
     [103363457515322] = "1dedecf1c031ba0ed00c779e13558cd5", -- Chop A Forest (Lobby)
     [77239332768345] = "1dedecf1c031ba0ed00c779e13558cd5", -- Chop A Forest (Forest)
+	[122969114308489] = "8604ed338e6cd76e74fdc3d09c127d24", -- Find Animal Bones
 }
 
 local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
