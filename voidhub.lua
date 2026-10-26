@@ -28,6 +28,7 @@ local GAME_SCRIPTS = {
     [103363457515322] = "1dedecf1c031ba0ed00c779e13558cd5", -- Chop A Forest (Lobby)
     [77239332768345] = "1dedecf1c031ba0ed00c779e13558cd5", -- Chop A Forest (Forest)
 	[122969114308489] = "8604ed338e6cd76e74fdc3d09c127d24", -- Find Animal Bones
+	[81559365630003] = "d7b9066513311a7533139a86b707267b", -- Create a Robot Fighter
 }
 
 local isMobile = UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
